@@ -152,11 +152,11 @@ order-inventory-management/
 ```text
 USER
 Username: marees
-Password: password123
+Password: Set your own local password
 
 ADMIN
 Username: admin
-Password: admin123
+Password: Set your own local password
 ```
 
 > These credentials are intended for local/demo use. Change or remove demo credentials before deploying the application publicly.
