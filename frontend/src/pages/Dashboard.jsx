@@ -17,11 +17,14 @@ function Dashboard() {
         ========================= */}
         <aside
           className="col-lg-2 col-md-3 text-white d-flex flex-column"
-          style={{ backgroundColor: "#1f2937" }}
+          style={{
+            backgroundColor: "#1f2937",
+            height: "100vh",
+            overflow: "hidden",
+          }}
         >
-
           {/* Logo */}
-          <div className="px-4 py-4 border-bottom border-secondary">
+          <div className="px-4 py-3 border-bottom border-secondary">
             <div className="d-flex align-items-center gap-3">
               <div
                 className="rounded-3 d-flex align-items-center justify-content-center"
@@ -47,16 +50,21 @@ function Dashboard() {
           </div>
 
           {/* Main Menu */}
-          <nav className="p-3 flex-grow-1">
-
-            <div className="text-uppercase text-white-50 small fw-semibold mb-3 px-2">
+          <nav
+            className="px-3 py-2 flex-grow-1"
+            style={{
+              minHeight: 0,
+              overflow: "hidden",
+            }}
+          >
+            <div className="text-uppercase text-white-50 small fw-semibold mb-2 px-2">
               Main Menu
             </div>
 
             {/* Dashboard */}
             <button
               type="button"
-              className="btn w-100 text-start mb-2 text-white fw-semibold"
+              className="btn w-100 text-start mb-1 text-white fw-semibold"
               style={{
                 backgroundColor: "#0d6efd",
                 borderRadius: "8px",
@@ -69,7 +77,7 @@ function Dashboard() {
             {/* Products */}
             <button
               type="button"
-              className="btn w-100 text-start mb-2 text-white"
+              className="btn w-100 text-start mb-1 text-white"
               style={{
                 backgroundColor: "transparent",
                 borderRadius: "8px",
@@ -83,7 +91,7 @@ function Dashboard() {
             {/* Inventory */}
             <button
               type="button"
-              className="btn w-100 text-start mb-2 text-white"
+              className="btn w-100 text-start mb-1 text-white"
               style={{
                 backgroundColor: "transparent",
                 borderRadius: "8px",
@@ -97,7 +105,7 @@ function Dashboard() {
             {/* Orders */}
             <button
               type="button"
-              className="btn w-100 text-start mb-2 text-white"
+              className="btn w-100 text-start mb-1 text-white"
               style={{
                 backgroundColor: "transparent",
                 borderRadius: "8px",
@@ -111,7 +119,7 @@ function Dashboard() {
             {/* Warehouses */}
             <button
               type="button"
-              className="btn w-100 text-start mb-2 text-white"
+              className="btn w-100 text-start mb-1 text-white"
               style={{
                 backgroundColor: "transparent",
                 borderRadius: "8px",
@@ -125,7 +133,7 @@ function Dashboard() {
             {/* Stock Movements */}
             <button
               type="button"
-              className="btn w-100 text-start mb-2 text-white"
+              className="btn w-100 text-start mb-1 text-white"
               style={{
                 backgroundColor: "transparent",
                 borderRadius: "8px",
@@ -135,16 +143,17 @@ function Dashboard() {
               <i className="bi bi-arrow-left-right me-3"></i>
               Stock Movements
             </button>
-
           </nav>
 
           {/* Bottom Menu */}
-          <div className="p-3 border-top border-secondary">
-
+          <div
+            className="px-3 py-2 border-top border-secondary"
+            style={{ flexShrink: 0 }}
+          >
             {/* Settings */}
             <button
               type="button"
-              className="btn w-100 text-start mb-2 text-white"
+              className="btn w-100 text-start mb-1 text-white"
               style={{
                 backgroundColor: "transparent",
                 borderRadius: "8px",
@@ -158,13 +167,14 @@ function Dashboard() {
             <button
               type="button"
               className="btn btn-outline-danger w-100 text-start"
-              style={{ borderRadius: "8px" }}
+              style={{
+                borderRadius: "8px",
+              }}
               onClick={handleLogout}
             >
               <i className="bi bi-box-arrow-right me-3"></i>
               Logout
             </button>
-
           </div>
         </aside>
 
@@ -173,14 +183,16 @@ function Dashboard() {
         ========================= */}
         <main
           className="col-lg-10 col-md-9"
-          style={{ backgroundColor: "#f3f6f9" }}
+          style={{
+            backgroundColor: "#f3f6f9",
+            height: "100vh",
+            overflowY: "auto",
+            overflowX: "hidden",
+          }}
         >
-
           {/* Header */}
           <header className="bg-white border-bottom px-4 py-3">
-
             <div className="d-flex justify-content-between align-items-center">
-
               <div>
                 <h2 className="mb-1 fw-bold">
                   Dashboard
@@ -193,7 +205,6 @@ function Dashboard() {
 
               {/* User Profile */}
               <div className="d-flex align-items-center gap-3">
-
                 <div
                   className="bg-primary text-white rounded-circle d-flex align-items-center justify-content-center fw-bold"
                   style={{
@@ -213,11 +224,8 @@ function Dashboard() {
                     Administrator
                   </small>
                 </div>
-
               </div>
-
             </div>
-
           </header>
 
           {/* Dashboard Content */}
@@ -241,9 +249,7 @@ function Dashboard() {
               {/* Products */}
               <div className="col-xl-3 col-md-6">
                 <div className="card h-100 border-0 shadow-sm">
-
                   <div className="card-body">
-
                     <div className="bg-primary bg-opacity-10 text-primary rounded-3 p-3 d-inline-flex mb-3">
                       <i className="bi bi-box-seam fs-3"></i>
                     </div>
@@ -264,7 +270,6 @@ function Dashboard() {
                       View Products
                       <i className="bi bi-arrow-right ms-2"></i>
                     </button>
-
                   </div>
                 </div>
               </div>
@@ -272,9 +277,7 @@ function Dashboard() {
               {/* Inventory */}
               <div className="col-xl-3 col-md-6">
                 <div className="card h-100 border-0 shadow-sm">
-
                   <div className="card-body">
-
                     <div className="bg-success bg-opacity-10 text-success rounded-3 p-3 d-inline-flex mb-3">
                       <i className="bi bi-bar-chart-line fs-3"></i>
                     </div>
@@ -295,7 +298,6 @@ function Dashboard() {
                       View Inventory
                       <i className="bi bi-arrow-right ms-2"></i>
                     </button>
-
                   </div>
                 </div>
               </div>
@@ -303,9 +305,7 @@ function Dashboard() {
               {/* Orders */}
               <div className="col-xl-3 col-md-6">
                 <div className="card h-100 border-0 shadow-sm">
-
                   <div className="card-body">
-
                     <div className="bg-warning bg-opacity-10 text-warning rounded-3 p-3 d-inline-flex mb-3">
                       <i className="bi bi-cart3 fs-3"></i>
                     </div>
@@ -326,7 +326,6 @@ function Dashboard() {
                       View Orders
                       <i className="bi bi-arrow-right ms-2"></i>
                     </button>
-
                   </div>
                 </div>
               </div>
@@ -334,9 +333,7 @@ function Dashboard() {
               {/* Warehouses */}
               <div className="col-xl-3 col-md-6">
                 <div className="card h-100 border-0 shadow-sm">
-
                   <div className="card-body">
-
                     <div className="bg-primary bg-opacity-10 text-primary rounded-3 p-3 d-inline-flex mb-3">
                       <i className="bi bi-building fs-3"></i>
                     </div>
@@ -357,14 +354,12 @@ function Dashboard() {
                       View Warehouses
                       <i className="bi bi-arrow-right ms-2"></i>
                     </button>
-
                   </div>
                 </div>
               </div>
 
             </div>
           </section>
-
         </main>
       </div>
     </div>
